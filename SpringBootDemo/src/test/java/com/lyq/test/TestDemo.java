@@ -17,7 +17,6 @@ public class TestDemo {
         TreeSet<String> tSet = new TreeSet<>();
         tSet.add("String");
         tSet.add("Abbas");
-        tSet.add("Zero");
         System.out.println(tSet);
     }
 }
