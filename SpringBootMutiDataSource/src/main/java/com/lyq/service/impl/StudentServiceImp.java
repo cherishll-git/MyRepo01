@@ -1,20 +1,28 @@
 package com.lyq.service.impl;
 
-import com.lyq.dao.StudentMapper;
-import com.lyq.pojo.Student;
+import com.lyq.mysqldao.MysqlStudentMapper;
+import com.lyq.orcldao.OrclStudentMapper;
 import com.lyq.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service("studentService")
 public class StudentServiceImp implements StudentService {
     @Autowired
-    private StudentMapper studentMapper;
+    private OrclStudentMapper orclStudentMapper;
+    @Autowired
+    private MysqlStudentMapper mysqlStudentMapper;
 
     @Override
-    public List<Student> getAllStudents() {
-        return studentMapper.getAllStudents();
+    public List<Map<String, Object>> getAllStudentsFromMysql() {
+        return  mysqlStudentMapper.getAllStudents();
+    }
+
+    @Override
+    public List<Map<String, Object>> getAllStudentsFromOrcl() {
+        return orclStudentMapper.getAllStudents();
     }
 }

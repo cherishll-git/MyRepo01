@@ -1,17 +1,16 @@
-package com.lyq.dao;
+package com.lyq.mysqldao;
 
 import com.lyq.pojo.Student;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
-@Component
-public interface StudentMapper {
+public interface MysqlStudentMapper {
     int add(Student student);
     int update(Student student);
     int deleteByIds(String sno);
     Student queryStudentById(String sno);
-    List<Student> getAllStudents();
+    List<Map<String, Object>> getAllStudents();
 }

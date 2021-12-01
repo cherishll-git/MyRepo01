@@ -1,9 +1,9 @@
 package com.lyq.service;
 
-import com.lyq.pojo.Student;
-
 import java.util.List;
+import java.util.Map;
 
 public interface StudentService {
-    List<Student> getAllStudents();
+    List<Map<String, Object>> getAllStudentsFromMysql();
+    List<Map<String, Object>> getAllStudentsFromOrcl();
 }
