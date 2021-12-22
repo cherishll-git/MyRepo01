@@ -71,3 +71,7 @@ spring:
       filter:
         stat:
           log-slow-sql: true
+demo:
+  isopen: true
+  to-who: 李四
+  say-what: 自定义的starter测试成功
