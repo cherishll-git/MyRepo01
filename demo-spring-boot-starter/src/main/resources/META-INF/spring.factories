@@ -1,0 +1,3 @@
+#指定自动装配的配置类
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.lyq.starter.config.DemoAutoconfiguration
