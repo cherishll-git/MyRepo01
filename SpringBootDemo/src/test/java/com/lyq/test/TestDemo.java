@@ -1,5 +1,7 @@
 package com.lyq.test;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -19,4 +21,13 @@ public class TestDemo {
         tSet.add("Abbas");
         System.out.println(tSet);
     }
+
+    @Test
+    public void test(){
+        String str = "1212";
+        str = ("1212" == str) ? "121" : str;
+        System.out.println(str);
+    }
+
+
 }

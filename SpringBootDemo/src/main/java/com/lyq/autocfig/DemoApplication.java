@@ -19,7 +19,7 @@ public class DemoApplication {
     }
 
     @RequestMapping("/")
-    public Object index(){
-        return "helll demo: "+bmbooService.getName()+new Date().getTime();
-        }
-        }
+    public Object index() {
+        return "helll demo: " + bmbooService.getName() + new Date().getTime();
+    }
+}
